@@ -9,9 +9,27 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-}
 
+function isValid(name) { 
+  if(name != null && name.indexOf(" ") == -1 &&name != "" && name.length >= 4) {
+return true
+}else{
+  return false
+}
+};
+/**function isValid(name) {
+  if(name != null && name != "" && name.length >= 4){
+  for(let i of name){
+  if (i == " "){
+  return false
+  }
+  }
+  return true;
+  }
+  else
+  return false;
+  }
+  */
 function sayHello() {
   const userName = prompt('Введите ваше имя');
 
@@ -20,4 +38,4 @@ function sayHello() {
   } else {
     print('Некорректное имя');
   }
-}
+};
